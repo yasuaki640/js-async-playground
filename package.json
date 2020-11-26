@@ -1,0 +1,23 @@
+{
+  "name": "js-async-playground",
+  "version": "1.0.0",
+  "description": "- クライアントサイドよわよわなのでJavaScriptの非同期通信を学ぶよ！\r - [News API](https://newsapi.org/)を使ってリッチなクライアントサイドを非同期で書く予定だよ！！\r - Play Ground なのでCommit履歴ちょーきたなくなるよ！！\r - それでは _Have A Nice Day_",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasuaki640/js-async-playground.git"
+  },
+  "author": "Yasuaki Watanabe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yasuaki640/js-async-playground/issues"
+  },
+  "homepage": "https://github.com/yasuaki640/js-async-playground#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
