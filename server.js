@@ -10,9 +10,9 @@ const app = express();
 dotenv.config({path: './.env'});
 const newsapi = new NewsAPI(process.env.NEWS_API_ACCESS_KEY);
 
+//routing
 app.get("/", (req, res) =>
     res.sendFile(path.join(__dirname, 'view', 'index.html')));
-
 app.get("/data", (req, res) => {
     newsapi.v2.topHeadlines({
         country: 'jp',
