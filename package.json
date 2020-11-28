@@ -4,6 +4,7 @@
   "description": "- クライアントサイドよわよわなのでJavaScriptの非同期通信を学ぶよ！\r - [News API](https://newsapi.org/)を使ってリッチなクライアントサイドを非同期で書く予定だよ！！\r - Play Ground なのでCommit履歴ちょーきたなくなるよ！！\r - それでは _Have A Nice Day_",
   "main": "server.js",
   "scripts": {
+    "debug": "nodemon ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,5 +23,8 @@
     "express": "^4.17.1",
     "newsapi": "^2.4.1",
     "nodemon": "^2.0.6"
+  },
+  "nodemonConfig": {
+    "ignore": ["./node_modules"]
   }
 }
