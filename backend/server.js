@@ -22,7 +22,7 @@ app.get("/data", (req, res) => {
     }).then(news => res.json(news));
 });
 
-const PORT = 3000;
-app.listen(PORT, () => console.log('listening on port ' + PORT));
+app.listen(process.env.PORT, () =>
+    console.log('listening on port ' + process.env.PORT));
 
 module.exports = app;
