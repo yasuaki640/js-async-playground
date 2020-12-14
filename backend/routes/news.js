@@ -9,14 +9,12 @@ module.exports = (app) => {
 
     router.route('/news')
         .get((req, res) => {
-            let country = req.query.country || 'jp';
-            let category = req.query.category || 'general';
-            let pageSize = Number(req.query.pageSize) || 30;
-
             newsapi.v2.topHeadlines({
-                country: country,
-                category: category,
-                pageSize: pageSize
+                country: req.query.country || 'jp',
+                category: req.query.category || 'general',
+                q: req.query.q || '',
+                pageSize: Number(req.query.pageSize) || 30
+
             }).then(news => res.json(news));
         });
 
