@@ -28,9 +28,9 @@ export default function App() {
             <p>Enter news info you looking for.</p>
             <form>
                 <input placeholder={'keyword'}/>
-                <Select options={countryOptions}/>
-                <Select options={categoryOptions}/>
-                <Select options={pageSizeOptions}/>
+                <Select defaultValue={{value: 'en', label: 'en'}} options={countryOptions}/>
+                <Select defaultValue={{value: 'business', label: 'business'}} options={categoryOptions}/>
+                <Select defaultValue={{value: 15, label: 15}} options={pageSizeOptions}/>
             </form>
         </div>
     );
