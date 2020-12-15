@@ -17,7 +17,11 @@ export default function App() {
         {value: 'sports', label: 'sports'},
         {value: 'technology', label: 'technology'}
     ];
-
+    const pageSizeOptions = [
+        {value: 15, label: 15},
+        {value: 30, label: 30},
+        {value: 50, label: 50},
+    ];
     return (
         <div className='App'>
             <h1>Search Your Favorite Newssssss!!!!!!</h1>
@@ -26,6 +30,7 @@ export default function App() {
                 <input placeholder={'keyword'}/>
                 <Select options={countryOptions}/>
                 <Select options={categoryOptions}/>
+                <Select options={pageSizeOptions}/>
             </form>
         </div>
     );
