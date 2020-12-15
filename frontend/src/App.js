@@ -22,6 +22,7 @@ export default function App() {
         <div className="App">
             <h1>Search Your Favorite Newssssss!!!!!!</h1>
             <form>
+                <input placeholder={'keyword'}/>
                 <Select options={countryOptions}/>
                 <Select options={categoryOptions}/>
             </form>
