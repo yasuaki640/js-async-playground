@@ -19,8 +19,9 @@ export default function App() {
     ];
 
     return (
-        <div className="App">
+        <div className='App'>
             <h1>Search Your Favorite Newssssss!!!!!!</h1>
+            <p>Enter news info you looking for.</p>
             <form>
                 <input placeholder={'keyword'}/>
                 <Select options={countryOptions}/>
