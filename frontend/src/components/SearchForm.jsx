@@ -32,13 +32,13 @@ export const SearchForm = (props) => {
                 <input type={'text'} placeholder={'keyword'}/>
                 <input type={'submit'} value={'Submit'}/>
                 <Select
-                    defaultValue={{value: 'en', label: 'en'}}
+                    defaultValue={countryOptions[0]}
                     options={countryOptions}/>
                 <Select
-                    defaultValue={{value: 'business', label: 'business'}}
+                    defaultValue={categoryOptions[0]}
                     options={categoryOptions}/>
                 <Select
-                    defaultValue={{value: 15, label: 15}}
+                    defaultValue={pageSizeOptions[0]}
                     options={pageSizeOptions}/>
             </form>
         </>
