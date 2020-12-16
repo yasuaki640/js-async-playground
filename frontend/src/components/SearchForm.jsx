@@ -1,12 +1,9 @@
 import React, {useState} from "react";
 import Select from "react-select";
 
-const handleSubmit = (event) => {
-    const query = event.target.value;
-    alert(query);
-};
 
 export const SearchForm = (props) => {
+
     const countryOptions = [
         {value: 'en', label: 'en'},
         {value: 'jp', label: 'jp'},
@@ -26,10 +23,21 @@ export const SearchForm = (props) => {
         {value: 30, label: 30},
         {value: 50, label: 50},
     ];
+
+    const [keyword, setKeyword] = useState('');
+
+    const handleSubmit = () => {
+        alert(keyword);
+    };
+    
+    const handleChange = (event) => {
+        setKeyword(event.target.value);
+    };
+
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <input type={'text'} placeholder={'keyword'}/>
+                <input type={'text'} value={keyword} placeholder={'keyword'} onChange={handleChange}/>
                 <input type={'submit'} value={'Submit'}/>
                 <Select
                     defaultValue={countryOptions[0]}
