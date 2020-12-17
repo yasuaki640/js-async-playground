@@ -27,7 +27,11 @@ export const SearchForm = (props) => {
     const [keyword, setKeyword] = useState('');
 
     const handleSubmit = () => {
-        alert(keyword);
+        let data = {
+            country: country.value,
+            keyword: keyword,
+        };
+        alert(JSON.stringify(data));
     };
 
     const handleKeywordChange = (event) => {
