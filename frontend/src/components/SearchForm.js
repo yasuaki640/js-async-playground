@@ -29,25 +29,27 @@ export const SearchForm = (props) => {
     const handleSubmit = () => {
         alert(keyword);
     };
-    
-    const handleChange = (event) => {
-        setKeyword(event.target.value);
+
+    const handleKeywordChange = (event) => {
+        setKeyword(event.target.value)
+    };
+
+    const [country, setCountry] = useState(countryOptions[0]);
+
+    const handleCountryChange = (country) => {
+        setCountry(country);
     };
 
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <input type={'text'} value={keyword} placeholder={'keyword'} onChange={handleChange}/>
+                <input type={'text'} value={keyword} placeholder={'keyword'} onChange={handleKeywordChange}/>
+                <Select
+                    value={country}
+                    onChange={handleCountryChange}
+                    options={countryOptions}
+                />
                 <input type={'submit'} value={'Submit'}/>
-                <Select
-                    defaultValue={countryOptions[0]}
-                    options={countryOptions}/>
-                <Select
-                    defaultValue={categoryOptions[0]}
-                    options={categoryOptions}/>
-                <Select
-                    defaultValue={pageSizeOptions[0]}
-                    options={pageSizeOptions}/>
             </form>
         </>
     );
