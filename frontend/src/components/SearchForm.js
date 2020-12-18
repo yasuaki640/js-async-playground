@@ -31,6 +31,7 @@ export const SearchForm = (props) => {
             country: country.value,
             category: category.value,
             keyword: keyword,
+            pageSize: pageSize.value
         };
         alert(JSON.stringify(data));
     };
@@ -51,6 +52,12 @@ export const SearchForm = (props) => {
         setCategory(category);
     };
 
+    const [pageSize, setPageSize] = useState(pageSizeOptions[0]);
+
+    const handlePageSizeChange = (pageSize) => {
+        setPageSize(pageSize);
+    };
+
     return (
         <>
             <form onSubmit={handleSubmit}>
@@ -64,6 +71,11 @@ export const SearchForm = (props) => {
                     value={category}
                     onChange={handleCategoryChange}
                     options={categoryOptions}
+                />
+                <Select
+                    value={pageSize}
+                    onChange={handlePageSizeChange}
+                    options={pageSizeOptions}
                 />
                 <input type={'submit'} value={'Submit'}/>
             </form>
