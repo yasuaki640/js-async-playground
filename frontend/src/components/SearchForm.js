@@ -4,11 +4,17 @@ import Select from "react-select";
 
 export const SearchForm = (props) => {
 
+
     const countryOptions = [
         {value: 'en', label: 'en'},
         {value: 'jp', label: 'jp'},
         {value: 'cn', label: 'cn'}
     ];
+    const [country, setCountry] = useState(countryOptions[0]);
+    const handleCountryChange = (country) => {
+        setCountry(country);
+    };
+
     const categoryOptions = [
         {value: 'business', label: 'business'},
         {value: 'entertainment', label: 'entertainment'},
@@ -18,13 +24,25 @@ export const SearchForm = (props) => {
         {value: 'sports', label: 'sports'},
         {value: 'technology', label: 'technology'}
     ];
+    const [category, setCategory] = useState(categoryOptions[0]);
+    const handleCategoryChange = (category) => {
+        setCategory(category);
+    };
+
     const pageSizeOptions = [
         {value: 15, label: 15},
         {value: 30, label: 30},
         {value: 50, label: 50},
     ];
+    const [pageSize, setPageSize] = useState(pageSizeOptions[0]);
+    const handlePageSizeChange = (pageSize) => {
+        setPageSize(pageSize);
+    };
 
     const [keyword, setKeyword] = useState('');
+    const handleKeywordChange = (event) => {
+        setKeyword(event.target.value)
+    };
 
     const handleSubmit = () => {
         let data = {
@@ -36,32 +54,9 @@ export const SearchForm = (props) => {
         alert(JSON.stringify(data));
     };
 
-    const handleKeywordChange = (event) => {
-        setKeyword(event.target.value)
-    };
-
-    const [country, setCountry] = useState(countryOptions[0]);
-
-    const handleCountryChange = (country) => {
-        setCountry(country);
-    };
-
-    const [category, setCategory] = useState(categoryOptions[0]);
-
-    const handleCategoryChange = (category) => {
-        setCategory(category);
-    };
-
-    const [pageSize, setPageSize] = useState(pageSizeOptions[0]);
-
-    const handlePageSizeChange = (pageSize) => {
-        setPageSize(pageSize);
-    };
-
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <input type={'text'} value={keyword} placeholder={'keyword'} onChange={handleKeywordChange}/>
                 <Select
                     value={country}
                     onChange={handleCountryChange}
@@ -77,6 +72,7 @@ export const SearchForm = (props) => {
                     onChange={handlePageSizeChange}
                     options={pageSizeOptions}
                 />
+                <input type={'text'} value={keyword} placeholder={'keyword'} onChange={handleKeywordChange}/>
                 <input type={'submit'} value={'Submit'}/>
             </form>
         </>
