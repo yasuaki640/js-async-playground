@@ -29,6 +29,7 @@ export const SearchForm = (props) => {
     const handleSubmit = () => {
         let data = {
             country: country.value,
+            category: category.value,
             keyword: keyword,
         };
         alert(JSON.stringify(data));
@@ -44,6 +45,12 @@ export const SearchForm = (props) => {
         setCountry(country);
     };
 
+    const [category, setCategory] = useState(categoryOptions[0]);
+
+    const handleCategoryChange = (category) => {
+        setCategory(category);
+    };
+
     return (
         <>
             <form onSubmit={handleSubmit}>
@@ -52,6 +59,11 @@ export const SearchForm = (props) => {
                     value={country}
                     onChange={handleCountryChange}
                     options={countryOptions}
+                />
+                <Select
+                    value={category}
+                    onChange={handleCategoryChange}
+                    options={categoryOptions}
                 />
                 <input type={'submit'} value={'Submit'}/>
             </form>
