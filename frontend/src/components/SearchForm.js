@@ -4,7 +4,6 @@ import Select from "react-select";
 
 export const SearchForm = (props) => {
 
-
     const countryOptions = [
         {value: 'en', label: 'en'},
         {value: 'jp', label: 'jp'},
@@ -57,22 +56,31 @@ export const SearchForm = (props) => {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                <Select
-                    value={country}
-                    onChange={handleCountryChange}
-                    options={countryOptions}
-                />
-                <Select
-                    value={category}
-                    onChange={handleCategoryChange}
-                    options={categoryOptions}
-                />
-                <Select
-                    value={pageSize}
-                    onChange={handlePageSizeChange}
-                    options={pageSizeOptions}
-                />
-                <input type={'text'} value={keyword} placeholder={'keyword'} onChange={handleKeywordChange}/>
+                <label>Country
+                    <Select
+                        value={country}
+                        onChange={handleCountryChange}
+                        options={countryOptions}
+                    />
+                </label>
+                <label>Category
+                    <Select
+                        value={category}
+                        onChange={handleCategoryChange}
+                        options={categoryOptions}
+                    />
+                </label>
+                <label>page size
+                    <Select
+                        value={pageSize}
+                        onChange={handlePageSizeChange}
+                        options={pageSizeOptions}
+                    />
+                </label>
+                <label>Keyword
+                    <input type={'text'} value={keyword} placeholder={'Enter search keyword'}
+                           onChange={handleKeywordChange}/>
+                </label>
                 <input type={'submit'} value={'Submit'}/>
             </form>
         </>
