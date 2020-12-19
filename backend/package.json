@@ -4,6 +4,9 @@
   "description": "- クライアントサイドよわよわなのでJavaScriptの非同期通信を学ぶよ！\r - [News API](https://newsapi.org/)を使ってリッチなクライアントサイドを非同期で書く予定だよ！！\r - Play Ground なのでCommit履歴ちょーきたなくなるよ！！\r - それでは _Have A Nice Day_",
   "main": "server.js",
   "scripts": {
+    "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
+    "start-backend": "node_modules/.bin/nodemon ./server.js",
+    "start-frontend": "cd ../frontend && npm start",
     "debug": "node_modules/.bin/nodemon ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,7 +22,6 @@
   "homepage": "https://github.com/yasuaki640/js-async-playground#readme",
   "dependencies": {
     "axios": "^0.21.0",
-    "concurrently": "^5.3.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "newsapi": "^2.4.1",
@@ -29,5 +31,8 @@
     "ignore": [
       "./node_modules"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
   }
 }
