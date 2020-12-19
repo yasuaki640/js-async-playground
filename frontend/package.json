@@ -9,7 +9,6 @@
   "main": "src/index.js",
   "dependencies": {
     "axios": "^0.21.0",
-    "eslint-plugin-react": "^7.21.5",
     "react": "17.0.0",
     "react-bootstrap": "^1.4.0",
     "react-dom": "17.0.0",
@@ -18,7 +17,7 @@
   },
   "devDependencies": {
     "eslint": "^7.16.0",
-    "typescript": "3.8.3"
+    "eslint-plugin-react": "^7.21.5"
   },
   "proxy": "http://localhost:3000",
   "scripts": {
