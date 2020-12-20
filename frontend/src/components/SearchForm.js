@@ -43,14 +43,22 @@ export const SearchForm = (props) => {
         setKeyword(event.target.value)
     };
 
-    const handleSubmit = () => {
-        let data = {
-            country: country.value,
-            category: category.value,
-            keyword: keyword,
-            pageSize: pageSize.value
-        };
-        alert(JSON.stringify(data));
+    const [articles, setArticles] = useState([]);
+    const handleSubmit = async (event) => {
+        //prevent reload by submit
+        event.preventDefault();
+
+        let articlesArr = await axios.get('http://localhost:3000/news', {
+            params: {
+                country: country.value,
+                category: category.value,
+                q: keyword,
+                pageSize: pageSize.value
+            }
+        })
+            .then(res => res.data.articles);
+
+        setArticles(articlesArr);
     };
 
     return (
