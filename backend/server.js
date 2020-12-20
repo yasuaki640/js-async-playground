@@ -5,7 +5,10 @@ const app = express();
 const dotenv = require('dotenv');
 dotenv.config({path: './.env'});
 const morgan = require('morgan');
+const cors = require('cors');
 
+//enable all CORS requests
+app.use(cors());
 require('./routes/news')(app);
 
 //bind access logger
