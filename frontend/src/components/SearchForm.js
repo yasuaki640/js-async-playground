@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import Select from 'react-select';
-const axios = require('axios');
-
+import axios from 'axios';
 
 export const SearchForm = (props) => {
 
