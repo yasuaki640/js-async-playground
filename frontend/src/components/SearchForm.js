@@ -91,6 +91,9 @@ export const SearchForm = (props) => {
                 </label>
                 <input type={'submit'} value={'Submit'}/>
             </form>
+            {articles.map(article =>
+                <p>{article.title}</p>
+            )}
         </>
     );
 };
