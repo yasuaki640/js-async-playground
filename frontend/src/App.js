@@ -1,6 +1,7 @@
 import './App.css';
 import React, {useState} from "react";
 import {SearchForm} from "./components/SearchForm";
+import {Article} from "./components/Article";
 import axios from "axios";
 
 function App() {
@@ -72,7 +73,9 @@ function App() {
                 handleSubmit={handleSubmit}
             />
             {articles.map(article =>
-                <p key={article.title}>{article.title}</p>
+                <Article
+                    article={article}
+                />
             )}
         </div>
     );
