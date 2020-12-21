@@ -10,9 +10,7 @@ function App() {
         {value: 'cn', label: 'cn'}
     ];
     const [country, setCountry] = useState(countryOptions[0]);
-    const handleCountryChange = (country) => {
-        setCountry(country);
-    };
+    const handleCountryChange = country => setCountry(country);
 
     const categoryOptions = [
         {value: 'business', label: 'business'},
@@ -24,9 +22,7 @@ function App() {
         {value: 'technology', label: 'technology'}
     ];
     const [category, setCategory] = useState(categoryOptions[0]);
-    const handleCategoryChange = (category) => {
-        setCategory(category);
-    };
+    const handleCategoryChange = category => setCategory(category);
 
     const pageSizeOptions = [
         {value: 15, label: 15},
@@ -34,17 +30,13 @@ function App() {
         {value: 50, label: 50},
     ];
     const [pageSize, setPageSize] = useState(pageSizeOptions[0]);
-    const handlePageSizeChange = (pageSize) => {
-        setPageSize(pageSize);
-    };
+    const handlePageSizeChange = pageSize => setPageSize(pageSize);
 
     const [keyword, setKeyword] = useState('');
-    const handleKeywordChange = (event) => {
-        setKeyword(event.target.value)
-    };
+    const handleKeywordChange = event => setKeyword(event.target.value);
 
     const [articles, setArticles] = useState([]);
-    const handleSubmit = async (event) => {
+    const handleSubmit = async event => {
         //prevent reload by submit
         event.preventDefault();
 
