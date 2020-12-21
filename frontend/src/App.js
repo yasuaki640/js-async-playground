@@ -4,6 +4,8 @@ import {SearchForm} from "./components/SearchForm";
 import {Article} from "./components/Article";
 import axios from "axios";
 
+const endPoint = process.env.REACT_APP_BACKEND_ENDPOINT;
+
 function App() {
     const countryOptions = [
         {value: 'en', label: 'en'},
@@ -41,7 +43,7 @@ function App() {
         //prevent reload by submit
         event.preventDefault();
 
-        let articlesArr = await axios.get('http://localhost:3000/news', {
+        let articlesArr = await axios.get(endPoint + '/news', {
             params: {
                 country: country.value,
                 category: category.value,
