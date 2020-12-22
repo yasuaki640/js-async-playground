@@ -8,7 +8,7 @@ const endPoint = process.env.REACT_APP_BACKEND_ENDPOINT;
 
 function App() {
     const countryOptions = [
-        {value: 'en', label: 'en'},
+        {value: 'us', label: 'us'},
         {value: 'jp', label: 'jp'},
         {value: 'cn', label: 'cn'}
     ];
