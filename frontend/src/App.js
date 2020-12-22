@@ -75,9 +75,7 @@ function App() {
                 handleSubmit={handleSubmit}
             />
             {articles.map(article =>
-                <Article
-                    article={article}
-                />
+                <Article article={article}/>
             )}
         </div>
     );
