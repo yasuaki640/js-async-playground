@@ -19,7 +19,7 @@ export const SearchForm = (props) => {
                         options={props.categoryOptions}
                     />
                 </label>
-                <label>page size
+                <label>Page Size
                     <Select
                         value={props.pageSize}
                         onChange={props.handlePageSizeChange}
