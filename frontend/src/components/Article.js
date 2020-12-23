@@ -1,18 +1,22 @@
 import React from 'react';
-
-const imgStyle = {
-    width: '100%',
-    height: 'auto',
-    maxWidth: '400px'
-};
+import Card from "react-bootstrap/Card";
 
 export const Article = (props) => {
     return (
         <>
-            <h4>{props.article.title}</h4>
-            <a href={props.article.url} target="_blank" rel="noopener noreferrer">
-                <img style={imgStyle} alt={props.article.title} src={props.article.urlToImage}/>
-            </a>
+            <Card>
+                <Card style={{width: '18rem'}}>
+                    <a href={props.article.url}>
+                        <Card.Img variant="top" src={props.article.urlToImage}/>
+                    </a>
+                    <Card.Body>
+                        <Card.Title>{props.article.title}</Card.Title>
+                        <Card.Text>
+                            {props.article.article}
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
+            </Card>
         </>
     );
 };
