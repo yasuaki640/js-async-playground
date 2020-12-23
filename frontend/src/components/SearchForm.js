@@ -11,32 +11,30 @@ export const SearchForm = (props) => {
     return (
         <>
             <Form style={formStyle} onSubmit={props.handleSubmit}>
-                <Form.Label>Country
+                <Form.Group controlId={'formSearchNews'}>
+                    <Form.Label>Country</Form.Label>
                     <Select
                         value={props.country}
                         onChange={props.handleCountryChange}
                         options={props.countryOptions}
                     />
-                </Form.Label>
-                <Form.Label>Category
+                    <Form.Label>Category</Form.Label>
                     <Select
                         value={props.category}
                         onChange={props.handleCategoryChange}
                         options={props.categoryOptions}
                     />
-                </Form.Label>
-                <Form.Label>Page Size
+                    <Form.Label>Page Size</Form.Label>
                     <Select
                         value={props.pageSize}
                         onChange={props.handlePageSizeChange}
                         options={props.pageSizeOptions}
                     />
-                </Form.Label>
-                <Form.Label>Keyword
+                    <Form.Label>Keyword</Form.Label>
                     <Form.Control type={"text"} value={props.keyword} placeholder={'Enter search keyword'}
                                   onChange={props.handleKeywordChange}/>
-                </Form.Label>
-                <Button variant={"primary"} type={'submit'}>Search</Button>
+                    <Button variant={"primary"} type={'submit'}>Search</Button>
+                </Form.Group>
             </Form>
         </>
     );
