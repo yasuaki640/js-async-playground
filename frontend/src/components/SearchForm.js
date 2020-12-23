@@ -5,7 +5,9 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 const formStyle = {
-    maxWidth: '600px'
+    maxWidth: '600px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
 };
 
 export const SearchForm = (props) => {
