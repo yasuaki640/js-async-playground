@@ -13,7 +13,7 @@ const formStyle = {
 export const SearchForm = (props) => {
     return (
         <>
-            <Container>
+
                 <Form style={formStyle} onSubmit={props.handleSubmit}>
                     <Form.Group controlId={'formSelectCountry'}>
                         <Form.Label>Country</Form.Label>
@@ -46,7 +46,6 @@ export const SearchForm = (props) => {
                     </Form.Group>
                     <Button variant={"primary"} type={'submit'}>Search</Button>
                 </Form>
-            </Container>
         </>
     );
 };

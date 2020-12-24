@@ -1,7 +1,9 @@
 import './App.css';
 import React, {useState} from "react";
-import {SearchForm} from "./components/SearchForm";
+import Container from 'react-bootstrap/Container'
 import {Article} from "./components/Article";
+import {SearchForm} from "./components/SearchForm";
+
 import axios from "axios";
 
 const endPoint = process.env.REACT_APP_BACKEND_ENDPOINT;
@@ -58,25 +60,29 @@ function App() {
 
     return (
         <div className='App'>
-            <h1>Search Your Favorite Newssssss!!!!!!</h1>
-            <p>Enter news info you looking for.</p>
-            <SearchForm
-                country={country}
-                countryOptions={countryOptions}
-                handleCountryChange={handleCountryChange}
-                category={category}
-                categoryOptions={categoryOptions}
-                handleCategoryChange={handleCategoryChange}
-                pageSize={pageSize}
-                pageSizeOptions={pageSizeOptions}
-                handlePageSizeChange={handlePageSizeChange}
-                keyword={keyword}
-                handleKeywordChange={handleKeywordChange}
-                handleSubmit={handleSubmit}
-            />
-            {articles.map(article =>
-                <Article article={article}/>
-            )}
+            <Container>
+                <h1>Search Your Favorite Newssssss!!!!!!</h1>
+                <p>Enter news info you looking for.</p>
+                <SearchForm
+                    country={country}
+                    countryOptions={countryOptions}
+                    handleCountryChange={handleCountryChange}
+                    category={category}
+                    categoryOptions={categoryOptions}
+                    handleCategoryChange={handleCategoryChange}
+                    pageSize={pageSize}
+                    pageSizeOptions={pageSizeOptions}
+                    handlePageSizeChange={handlePageSizeChange}
+                    keyword={keyword}
+                    handleKeywordChange={handleKeywordChange}
+                    handleSubmit={handleSubmit}
+                />
+            </Container>
+            <Container>
+                {articles.map(article =>
+                    <Article article={article}/>
+                )}
+            </Container>
         </div>
     );
 }
