@@ -1,10 +1,10 @@
 import './App.css';
-import React, {useState} from "react";
+import React, {useState} from 'react';
 import Container from 'react-bootstrap/Container'
-import {Article} from "./components/Article";
-import {SearchForm} from "./components/SearchForm";
+import {Article} from './components/Article';
+import {SearchForm} from './components/SearchForm';
 
-import axios from "axios";
+import axios from 'axios';
 
 const endPoint = process.env.REACT_APP_BACKEND_ENDPOINT;
 

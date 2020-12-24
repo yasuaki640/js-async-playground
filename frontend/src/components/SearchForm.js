@@ -1,8 +1,8 @@
 import React from 'react';
 import Select from 'react-select';
 import Container from 'react-bootstrap/Container'
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 const formStyle = {
     maxWidth: '600px',
@@ -41,10 +41,10 @@ export const SearchForm = (props) => {
                     </Form.Group>
                     <Form.Group controlId={'formInputKeyword'}>
                         <Form.Label>Keyword</Form.Label>
-                        <Form.Control type={"text"} value={props.keyword} placeholder={'Enter search keyword'}
+                        <Form.Control type={'text'} value={props.keyword} placeholder={'Enter search keyword'}
                                       onChange={props.handleKeywordChange}/>
                     </Form.Group>
-                    <Button variant={"primary"} type={'submit'}>Search</Button>
+                    <Button variant={'primary'} type={'submit'}>Search</Button>
                 </Form>
         </>
     );
