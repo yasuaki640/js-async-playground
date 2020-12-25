@@ -7,7 +7,6 @@
     "start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
     "start-backend": "node_modules/.bin/nodemon ./server.js",
     "start-frontend": "cd ../frontend && npm start",
-    "debug": "node_modules/.bin/nodemon ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
