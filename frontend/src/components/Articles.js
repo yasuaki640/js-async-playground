@@ -18,7 +18,7 @@ const Article = (props) => {
     return (
         <>
             <Card>
-                <a href={props.article.url}>
+                <a href={props.article.url} target={'_blank'} rel={'noopener noreferrer'}>
                     <Card.Img variant='top' src={props.article.urlToImage}/>
                 </a>
                 <Card.Body>
