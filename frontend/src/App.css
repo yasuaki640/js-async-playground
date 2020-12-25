@@ -1,6 +1,11 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
+
+div.container {
+    margin-bottom: 10px;
+}
+
 
 
 
