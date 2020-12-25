@@ -1,7 +1,7 @@
 import './App.css';
 import React, {useState} from 'react';
 import Container from 'react-bootstrap/Container'
-import {Article} from './components/Article';
+import {Articles} from './components/Articles';
 import {SearchForm} from './components/SearchForm';
 
 import axios from 'axios';
@@ -59,6 +59,7 @@ function App() {
     };
 
     return (
+
         <div className='App'>
             <Container>
                 <h1>Search Your Favorite Newssssss!!!!!!</h1>
@@ -79,9 +80,7 @@ function App() {
                 />
             </Container>
             <Container>
-                {articles.map(article =>
-                    <Article article={article}/>
-                )}
+                <Articles articles={articles}/>
             </Container>
         </div>
     );

@@ -1,7 +1,20 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import CardColumns from 'react-bootstrap/CardColumns';
 
-export const Article = (props) => {
+export const Articles = props => {
+    return (
+        <>
+            <CardColumns>
+                {props.articles.map(article =>
+                    <Article article={article}/>
+                )}
+            </CardColumns>
+        </>
+    );
+};
+
+const Article = (props) => {
     return (
         <>
             <Card>
