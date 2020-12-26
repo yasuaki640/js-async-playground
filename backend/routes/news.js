@@ -1,7 +1,7 @@
-const router = require('express').Router();
 const NewsAPI = require('newsapi');
 const newsapi = new NewsAPI(process.env.NEWS_API_ACCESS_KEY);
 const morgam = require('morgan');
+const router = require('express').Router();
 
 module.exports = (app) => {
     router.route('/')
