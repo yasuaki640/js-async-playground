@@ -7,7 +7,7 @@ export const Articles = props => {
         <>
             <CardColumns>
                 {props.articles.map(article =>
-                    <Article article={article}/>
+                    <Article key={article.url} article={article}/>
                 )}
             </CardColumns>
         </>
@@ -17,7 +17,7 @@ export const Articles = props => {
 const Article = (props) => {
     return (
         <>
-            <Card key={props.article.url}>
+            <Card>
                 <a href={props.article.url} target={'_blank'} rel={'noopener noreferrer'}>
                     <Card.Img variant='top' src={props.article.urlToImage}/>
                 </a>
