@@ -3,7 +3,6 @@ import React, {useState} from 'react';
 import Container from 'react-bootstrap/Container'
 import {Articles} from './components/Articles';
 import {SearchForm} from './components/SearchForm';
-
 import axios from 'axios';
 
 const endPoint = process.env.REACT_APP_BACKEND_ENDPOINT;
