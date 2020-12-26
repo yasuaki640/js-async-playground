@@ -22,7 +22,7 @@ const Article = (props) => {
                     <Card.Img variant='top' src={props.article.urlToImage}/>
                 </a>
                 <Card.Body>
-                    <Card.Title>{props.article.title}</Card.Title>
+                    <Card.Title>{formatTitle(props.article.title)}</Card.Title>
                     <Card.Text>
                         {props.article.article}
                     </Card.Text>
@@ -30,4 +30,14 @@ const Article = (props) => {
             </Card>
         </>
     );
+};
+
+const MAX_DISPLAY_LENGTH = 45;
+const formatTitle = title => {
+    if (title.length > MAX_DISPLAY_LENGTH) {
+        return title.slice(0, MAX_DISPLAY_LENGTH) + '...';
+    } else {
+        return title;
+    }
+
 };
