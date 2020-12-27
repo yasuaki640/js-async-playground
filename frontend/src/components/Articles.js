@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
+import altImg from './alt-img.jpg';
 
 export const Articles = props => {
     return (
@@ -19,7 +20,7 @@ const Article = (props) => {
         <>
             <Card>
                 <a href={props.article.url} target={'_blank'} rel={'noopener noreferrer'}>
-                    <Card.Img variant='top' src={props.article.urlToImage}/>
+                    <Card.Img variant='top' src={props.article.urlToImage || altImg}/>
                 </a>
                 <Card.Body>
                     <Card.Title>{formatTitle(props.article.title)}</Card.Title>
