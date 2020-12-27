@@ -2,15 +2,15 @@
 readonly FRONTEND_SERVER_DIR_ROOT="./frontend"
 readonly BACKEND_SERVER_DIR_ROOT="./backend"
 
-config_server() {
-  cd "$/1" || return 1
+function config_server() {
+  cd "$1" || return 1
   yarn install
   cp .env.example .env
   cd ../
   return 0
 }
 
-handle_error() {
+function handle_error() {
   echo "This script returns non-zero exit code $?"
   exit 1
 }
