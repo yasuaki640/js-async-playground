@@ -1,9 +1,9 @@
 #!/bin/bash
-readonly FRONTEND_SERVER_DIR_ROOT='./frontend'
-readonly BACKEND_SERVER_DIR_ROOT='./backend'
+readonly FRONTEND_SERVER_DIR_ROOT="./frontend"
+readonly BACKEND_SERVER_DIR_ROOT="./backend"
 
 config_server() {
-  cd "$1" || return 1
+  cd "$/1" || return 1
   yarn install
   cp .env.example .env
   cd ../
