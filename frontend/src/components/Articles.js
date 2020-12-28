@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import CardColumns from 'react-bootstrap/CardColumns';
-import altImg from './alt-img.jpg';
+import altImg from './images/alt-img.jpg';
 
 export const Articles = props => {
     return (
