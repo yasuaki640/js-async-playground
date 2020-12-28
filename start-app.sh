@@ -27,5 +27,3 @@ config_server ${BACKEND_SERVER_DIR_ROOT} || handle_error
 
 cd ${BACKEND_SERVER_DIR_ROOT} || handle_error
 yarn run start
-
-echo 'starting new-api-app'
